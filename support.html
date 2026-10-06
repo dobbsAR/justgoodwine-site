@@ -52,6 +52,7 @@
           <li><a href="#logging">Batches and readings</a></li>
           <li><a href="#tools">Calculators</a></li>
           <li><a href="#reminders">Reminders</a></li>
+          <li><a href="#siri">Siri and HomePod</a></li>
           <li><a href="#sync">Sync and Apple Watch</a></li>
           <li><a href="#purchases">Purchases</a></li>
           <li><a href="#data">Your data</a></li>
@@ -119,7 +120,7 @@
           </details>
           <details class="faq">
             <summary>How do I delete a batch?</summary>
-            <div class="answer"><p>Choose <strong>Delete</strong> for the batch and confirm. On iPad, touch and hold the batch in the list and choose <strong>Delete Batch</strong>. Deleting is permanent and removes the batch, with all its readings and photos, from every device signed in to your iCloud.</p></div>
+            <div class="answer"><p>On iPad, touch and hold the batch in the list, choose <strong>Delete Batch</strong>, and confirm. Deleting is permanent and removes the batch, with all its readings and photos, from every device signed in to your iCloud.</p></div>
           </details>
           <details class="faq">
             <summary>Can I reuse a batch as a recipe?</summary>
@@ -169,11 +170,61 @@
           </details>
           <details class="faq">
             <summary>Can I deal with a reminder without opening the app?</summary>
-            <div class="answer"><p>Yes. Touch and hold the notification to mark it done or snooze it for an hour.</p></div>
+            <div class="answer"><p>Yes. Touch and hold the notification to mark it done or snooze it for an hour. You can also say “Hey Siri, mark a reminder done in Just Good Wine”.</p></div>
           </details>
           <details class="faq">
             <summary>Will the app send me marketing notifications?</summary>
             <div class="answer"><p>No. The only notifications are the reminders you create.</p></div>
+          </details>
+        </div>
+
+        <div class="faq-group" id="siri">
+          <h2>Siri and HomePod</h2>
+          <details class="faq">
+            <summary>What can I ask Siri?</summary>
+            <div class="answer">
+              <p>Say “Hey Siri” and one of these. Each phrase needs the app's name in it.</p>
+              <ul>
+                <li><strong>“What's due in Just Good Wine?”</strong> Siri reads out the reminders due today and any batch that needs attention.</li>
+                <li><strong>“How is my Backyard Merlot in Just Good Wine?”</strong> Siri gives the stage, latest gravity, estimated alcohol and next reminder. Use your own batch's name.</li>
+                <li><strong>“Log a gravity reading in Just Good Wine.”</strong> Siri asks which batch and what the reading was, then saves it.</li>
+                <li><strong>“Mark a reminder done in Just Good Wine.”</strong> If more than one is due, Siri asks which.</li>
+              </ul>
+              <p>They work on iPhone and on Apple Watch, and appear as actions in the Shortcuts app. Open the app once after installing or updating it so Siri learns your batch names.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary>Do the voice commands work on a HomePod?</summary>
+            <div class="answer">
+              <p>Yes. The HomePod passes the request to your iPhone, so the iPhone needs to be nearby on the same Wi-Fi, with <strong>Personal Requests</strong> turned on for you in the Home app (Home Settings, then your name).</p>
+            </div>
+          </details>
+          <details class="faq" id="briefings">
+            <summary>How do I have my HomePod tell me what's due through the day?</summary>
+            <div class="answer">
+              <p>Just Good Wine has three spoken briefings:</p>
+              <ul>
+                <li><strong>Morning</strong> and <strong>Afternoon</strong> are one-sentence nudges, such as “Two things need attention for your wine today.” They say nothing at all when nothing is due.</li>
+                <li><strong>Evening</strong> reads out the full list, including anything that came due during the day, then the first task for tomorrow.</li>
+              </ul>
+              <p>The app can't speak on its own schedule, so each one uses an automation in Apple's Shortcuts app. Set up the ones you want; the evening briefing on its own is a good place to start.</p>
+              <ol>
+                <li>Open the <strong>Shortcuts</strong> app on your iPhone and tap <strong>Automation</strong>, then <strong>+</strong>.</li>
+                <li>Choose <strong>Time of Day</strong>, set the time you want, and choose <strong>Daily</strong>.</li>
+                <li>Select <strong>Run Immediately</strong>, then tap <strong>Next</strong> and <strong>New Blank Automation</strong>.</li>
+                <li>Add the action <strong>Get Wine Briefing</strong> and set it to <strong>Morning</strong>.</li>
+                <li>Add the action <strong>Set Playback Destination</strong> and choose your HomePod.</li>
+                <li>Add the action <strong>Speak Text</strong>. It picks up the briefing automatically.</li>
+                <li>Tap <strong>Done</strong>. Repeat with a new time for <strong>Afternoon</strong> and <strong>Evening</strong>.</li>
+              </ol>
+              <p>Leave out step 5 to have your iPhone speak the briefing instead.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary>How do I turn the spoken briefings off for a while?</summary>
+            <div class="answer">
+              <p>In the app, open <strong>More</strong> and switch off <strong>Morning briefing</strong>, <strong>Afternoon briefing</strong> or <strong>Evening briefing</strong>. The automation stays in place and says nothing until you switch it back on. You can also say “Hey Siri, turn off wine briefings in Just Good Wine”.</p>
+            </div>
           </details>
         </div>
 
@@ -198,7 +249,7 @@
           </details>
           <details class="faq">
             <summary>What can I do on Apple Watch?</summary>
-            <div class="answer"><p>See your batches and their latest readings, log a new gravity and temperature reading, and receive your reminders. Batches are created on iPhone or iPad.</p></div>
+            <div class="answer"><p>See your batches and their latest readings, log a new gravity and temperature reading, mark reminders done, and receive your reminder alerts. You can also <a href="#siri">ask Siri</a> on the watch what's due or how a batch is doing, even without your iPhone nearby. Batches are created on iPhone or iPad.</p></div>
           </details>
           <details class="faq">
             <summary>I have a new iPhone. How do I get my batches back?</summary>

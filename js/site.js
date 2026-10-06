@@ -30,3 +30,11 @@ if (search) {
     if (empty) empty.style.display = shown === 0 ? "block" : "none";
   });
 }
+
+// A link straight to one answer (e.g. support.html#briefings) opens that answer
+function openLinkedAnswer() {
+  const target = location.hash && document.querySelector(location.hash);
+  if (target && target.matches("details")) target.open = true;
+}
+openLinkedAnswer();
+window.addEventListener("hashchange", openLinkedAnswer);
